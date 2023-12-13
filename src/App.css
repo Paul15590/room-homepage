@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#hamburger{
+  display: none;
 }
+#icon-close{
+  display: none;
+}
+  ul li{
+    list-style-type: none;
+    display: inline-block;
+  }
+  ul li a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    margin: 0px 15px;
+  }
+ nav a:hover{
+    border-bottom: 2px solid hsl(0, 0%, 100%);
+  }
+main > div{
+     /* background-image: url(Asset/desktop-image-hero-1.jpg); */
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 60%;
+     display: -webkit-flex;
+     display: flex;
+     padding: 35px;
+     height: 400px;
+     position: relative;
+  }
+ main>aside{
+    background-color: hsl(0, 0%, 100%);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+  }
+   aside h1,p{
+      margin: 15px 0px;
+    }
+    aside h1{
+      font-size: 45px;
+      font-weight: 700;
+    }
+    aside  p{
+      color: hsl(0, 0%, 63%);
+      font-size: 17px;
+    }
+    
+    aside a{
+        letter-spacing: 5px;
+        color: black;
+        text-decoration: none;
+    }
+    aside a:hover{
+        color: hsl(0, 0%, 63%);
+    }
+  
+/* footer  style*/
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    footer div{
+      min-height: 250px;
+    }
+
+
+    footer .div-one{
+    background-image: url(Asset/image-about-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
   }
-  to {
-    transform: rotate(360deg);
+  footer .div-two{
+    background-color:hsl(0, 0%, 100%) ;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
   }
-}
+
+  .div-two>h3{
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 5px;
+  }
+    footer .div-two p{
+      color: hsl(0, 0%, 63%);
+      font-size: 15px;
+    }
+  footer .div-three{
+    background-image: url(Asset/image-about-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+
+  }
+
+  
+ section.arrow{
+  display: flex;
+  position: absolute;
+  bottom:0 ;
+  right: 0;
+ } 
+ section.arrow >div{
+  background-color:hsl(0, 0%, 0%);
+  padding: 15px 23.5px;
+ }
+ section.arrow >div:hover{
+  background-color: hsl(0, 0%, 27%) ;
+ }
+ #arrow-left, #arrow-right{
+    cursor: pointer;
+ }
+
+ @media screen and (max-width:700px){
+  aside h1{
+    font-size: 40px;
+  }
+ 
+ }
+
+ 
+  @media screen and (max-width:600px){
+ .flex{
+        flex-direction: column;
+      }
+     #hamburger{
+        display: block;
+        width: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 35px;
+        left: 30px;
+      }
+      #icon-close{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left:50px;
+        top: 33px;
+      }
+      nav{
+        display: none;
+      }
+     nav ul{
+      display: none;
+      position: absolute;
+      background-color: hsl(0, 0%, 100%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-top: 40px ;
+      height: 100px;
+      z-index: 2;
+      display: flex;
+      justify-content: flex-end;
+
+     }
+     
+     ul li a{
+      color: hsl(0, 0%, 0%);
+     }
+      
+    
+    main > div , main > aside {
+      width: 100%;
+    }
+   
+    main > div{
+      /* background-image: url(Asset/mobile-image-hero-1.jpg); */
+      background-repeat: no-repeat;
+      background-size: cover ;
+      min-height: 400px;
+      position: relative;
+    }
+    .imageLogo{
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+     main > aside{
+      height: 300px;
+     }
+     main > aside h1{
+      font-size: 40px;
+     }
+     main > aside p{
+      font-size: 15px;
+     }
+     footer .div-one , footer .div-two , footer .div-three{
+      width: 100%;
+      height: 300px;
+     }
+
+ section.arrow{
+    bottom: 0;
+    right: 0;
+   }
+  }
+  
